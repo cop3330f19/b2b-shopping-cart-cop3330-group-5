@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+    
+    class Customer{
+    private::
+    std::string cnum;
+    std::string cname;
+    double credit;
+    
+    
+    public::
+    //Constructors
+    Customer();
+    Customer(string, string, double);
+    
+    //Accessor and Mutator functions
+    
+    
+    };
