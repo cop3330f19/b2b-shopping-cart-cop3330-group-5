@@ -7,40 +7,21 @@ private:
 	std::string city;
 	std::string state;
 	std::string zipCode;
+    
 public:
 	Address();
-	Address(std::string streetAddress, std::string city, std::string state, std::string zipCode) {
-		this->streetAddress = streetAddress;
-		this->city  = city;
-		this->state = state;
-		this->zipCode = zipCode;
-	}
-	void setStreetAddress(std::string addr){
-		streetAddress = addr;
-	}
-	void setCity(std::string city) {
-		this->city = city;
-	}
-	void setState(std::string state){
-		this->state = state;
-	}
-	void setZipCode(std::string zipCode){
-		this->zipCode = zipCode;
-	}
-	std::string getStreetAddress() {
-		return streetAddress;
-	}
-	std::string getCity(){
-		return city;
-	}
-	std::string getState(){
-		return state;
-	}
-	std::string getZipCode(){
-		return zipCode;
-	}
-	//std::string getAddress{
-	//	
-	//}
+	Address(std::string, std::string, std::string, std::string);
+		
+	void setStreetAddress(std::string);
+	void setCity(std::string);
+	void setState(std::string);
+	void setZipCode(std::string);
+
+        
+	std::string getStreetAddress();
+	std::string getCity();
+	std::string getState();
+	std::string getZipCode();
+    
 
 };
