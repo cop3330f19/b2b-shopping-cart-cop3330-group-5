@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include "inventory.dat"
 #include "Address.h"
 using namespace std;
 
@@ -10,39 +9,45 @@ string city;
 string state;
 string zipCode;
 
-Address::Address();
+Address::Address(){
+    streetAddress="";
+    city="";
+    state="";
+    zipCode="";  
+}
 
-Address::Address(string streetAddress, string city, string state, string zipCode)
+Address::Address(string addr, string c, string st, string zip)
 {
-this->streetAddress = streetAddress;
-this->city = city;
-this->state = state;
-this->zipCode;
+    streetAddress = addr;
+    city = c;
+    state =st;
+    zipCode=zip;
 }
 
 void Address::setStreetAddress(string addr)
 {
-streetAddress = addr;
+    streetAddress = addr;
 }
 
-void Address setCity(string city) 
+void Address::setCity(string c) 
 {
-this->city = city;
+    city = c;
 }
-void Address::setState(string state)
+void Address::setState(string st)
 {
-this->state = state;
+    state = st;
 }
 
-void Address::setZipCode(string zipCode)
+void Address::setZipCode(string zip)
 {
-this->zipCode = zipCode;
+    zipCode = zip;
 }
 
-string getStreetAddress(){return streetAddress;}
+string Address::getStreetAddress(){return streetAddress;}
 
-string getCity(){return city;}
+string Address::getCity(){return city;}
 
-string getState(){return state;}
+string Address::getState(){return state;}
 
-string getAddress(){}
+string Address::getZipCode(){return zipCode;}
+
