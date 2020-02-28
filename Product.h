@@ -14,16 +14,16 @@ class Product{
         int stockQuantity;
     
 	public:
-        Inventory(); //non-argument constructor
-        Inventory(int, int, double,std::string); //constructor that accepts all member variables
+        Product(); //non-argument constructor
+        Product(int, int, double,std::string); //constructor that accepts all member variables
         
         int getItemNo();
         std::string getDescription();
         double getPrice();
-        int get StockQuantity();
+        int getStockQuantity();
     
     
-        void setItemNo()int;
+        void setItemNo(int);
         void setDescription(std::string);
         void setPrice(double);
         void setStockQuantity(int);
