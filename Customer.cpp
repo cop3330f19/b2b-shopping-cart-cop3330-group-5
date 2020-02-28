@@ -1,43 +1,58 @@
 #include <iostream>
-#include <ctime>
 #include <sstream>
 #include <vector>
-#include <fstream>
-#include <cstdlib>
 #include <iomanip>
 #include <string>
+#include "Customer.h"
 
 using namespace std;
 
-struct Customer
-    {
-        string customerNum;
-        string customerName;
-        double lineOfCredit;
-        Address * corperateAddress;
-    };
+Customer::Customer(string custNum, string custName, double l_c)
+{
+    customerNum=custNum;
+    customerName=custName;
+    lineOfCredit=l_c;
+}
+    
+Customer::Customer()
+{
+    customerNum=""; 
+    customerName="";
+    lineOfCredit=0;
+}
 
-struct Address
-    {
-         string streetAddress;
-         string city;
-         string state;
-         string zipCode;
-    };
+//set functions
+void Customer::setCustomerNum(string custNum)
+{
+    customerNum=custNum;
+}
 
-struct Memory
-    {
-        int position;
-        int quantity;
-        double cartTotal;
-        double remainFunds;
-    };
+void Customer::setCustomerName(string custName)
+{
+    customerName=custName;
+}
 
-struct Product
-    {
-        int itemNo;
-        string description;
-        double price;
-        int stockQuantity;
-    };
+void Customer::setLineOfCredit(double l_c)
+{
+    lineOfCredit= l_c;
+}
+
+
+//get functions
+string Customer::getCustomerNum()
+{
+    return customerNum;
+}
+
+string Customer::getCustomerName()
+{
+    return customerName;
+}
+
+
+double Customer::getLineOfCredit()
+{
+    return lineOfCredit;
+}
+
 
